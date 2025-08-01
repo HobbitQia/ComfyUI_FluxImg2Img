@@ -1,0 +1,195 @@
+{
+    "id": "7fa1659e-aa9d-4af6-b4ca-2928138f2934",
+    "revision": 0,
+    "last_node_id": 71,
+    "last_link_id": 183,
+    "nodes": [
+      {
+        "id": 71,
+        "type": "PreviewImage",
+        "pos": [
+          430.1933898925781,
+          -692.5875244140625
+        ],
+        "size": [
+          140,
+          246.00003051757812
+        ],
+        "flags": {},
+        "order": 3,
+        "mode": 0,
+        "inputs": [
+          {
+            "name": "images",
+            "type": "IMAGE",
+            "link": 178
+          }
+        ],
+        "outputs": [],
+        "properties": {
+          "Node name for S&R": "PreviewImage"
+        },
+        "widgets_values": []
+      },
+      {
+        "id": 70,
+        "type": "FluxImageProcessor",
+        "pos": [
+          -102.95497131347656,
+          -673.59033203125
+        ],
+        "size": [
+          400,
+          300
+        ],
+        "flags": {},
+        "order": 2,
+        "mode": 0,
+        "inputs": [
+          {
+            "name": "pipeline",
+            "type": "FLUX_PIPELINE",
+            "link": 176
+          },
+          {
+            "name": "image",
+            "type": "IMAGE",
+            "link": 180
+          }
+        ],
+        "outputs": [
+          {
+            "name": "IMAGE",
+            "type": "IMAGE",
+            "links": [
+              178
+            ]
+          }
+        ],
+        "properties": {
+          "Node name for S&R": "FluxImageProcessor"
+        },
+        "widgets_values": [
+          "front view, white background, matte texture, openwork filigree scroll pattern, eight-petal flower, gold bead, leaf, scroll pattern, ruyi, coin pattern, twisted rope",
+          0.7500000000000001,
+          40,
+          3.5,
+          755146588857830,
+          "randomize",
+          1024,
+          1024,
+          4
+        ]
+      },
+      {
+        "id": 69,
+        "type": "FluxModelLoader",
+        "pos": [
+          -470.01763916015625,
+          -508.55023193359375
+        ],
+        "size": [
+          270,
+          82
+        ],
+        "flags": {},
+        "order": 0,
+        "mode": 0,
+        "inputs": [],
+        "outputs": [
+          {
+            "name": "pipeline",
+            "type": "FLUX_PIPELINE",
+            "links": [
+              176
+            ]
+          }
+        ],
+        "properties": {
+          "Node name for S&R": "FluxModelLoader"
+        },
+        "widgets_values": [
+          "/mnt/public/qjj/weights/FLUX.1-dev",
+          "/mnt/public/qjj/ai-toolkit/output/my_first_flux_lora_0728-brachelet/my_first_flux_lora_0728-brachelet.safetensors"
+        ]
+      },
+      {
+        "id": 43,
+        "type": "LoadImage",
+        "pos": [
+          -821.7699584960938,
+          -683.4039306640625
+        ],
+        "size": [
+          270,
+          314
+        ],
+        "flags": {},
+        "order": 1,
+        "mode": 0,
+        "inputs": [],
+        "outputs": [
+          {
+            "name": "IMAGE",
+            "type": "IMAGE",
+            "links": [
+              180
+            ]
+          },
+          {
+            "name": "MASK",
+            "type": "MASK",
+            "links": null
+          }
+        ],
+        "properties": {
+          "Node name for S&R": "LoadImage"
+        },
+        "widgets_values": [
+          "01-6mm.png",
+          "image"
+        ]
+      }
+    ],
+    "links": [
+      [
+        176,
+        69,
+        0,
+        70,
+        0,
+        "FLUX_PIPELINE"
+      ],
+      [
+        178,
+        70,
+        0,
+        71,
+        0,
+        "IMAGE"
+      ],
+      [
+        180,
+        43,
+        0,
+        70,
+        1,
+        "IMAGE"
+      ]
+    ],
+    "groups": [],
+    "config": {},
+    "extra": {
+      "ds": {
+        "scale": 0.7513148009015777,
+        "offset": [
+          967.5687096406564,
+          1038.7958577050676
+        ]
+      },
+      "frontendVersion": "1.22.2",
+      "groupNodes": {},
+      "ue_links": []
+    },
+    "version": 0.4
+  }
