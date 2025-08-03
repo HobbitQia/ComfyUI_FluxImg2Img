@@ -54,8 +54,6 @@ class FluxImageProcessor:
                     "default": 1,
                     "min": 1,
                     "max": 100,
-                    "step": 1,
-                    "display": "slider"
                 }),
             }
         }

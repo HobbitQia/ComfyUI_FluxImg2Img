@@ -109,8 +109,8 @@
           "Node name for S&R": "FluxModelLoader"
         },
         "widgets_values": [
-          "/mnt/public/qjj/weights/FLUX.1-dev",
-          "/mnt/public/qjj/ai-toolkit/output/my_first_flux_lora_0728-brachelet/my_first_flux_lora_0728-brachelet.safetensors"
+          "/path/to/flux",
+          "/path/to/checkpoint"
         ]
       },
       {
